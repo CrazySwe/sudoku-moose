@@ -29,7 +29,7 @@ function Board (board = Array(81).fill(0)) {
   /**
    * Creates a string representing the board.
    *
-   * @param {string} separator - Separator to add between digits of the Board.
+   * @param {string} [separator=''] - Separator to add between digits of the Board.
    * @returns {string} - String representing the Board.
    */
   this.toString = function (separator = '') {
@@ -54,8 +54,8 @@ function Board (board = Array(81).fill(0)) {
  * Parses a string to a Board object.
  *
  * @param {string} boardString - The string to parse.
- * @param {string} emptyChar - The character that represents an empty field.
- * @param {string} separator - If the string has custom separator between digits.
+ * @param {string} [emptyChar='0'] - The character that represents an empty field.
+ * @param {string} [separator=''] - If the string has custom separator between digits.
  * @returns {Board} - The resulting board object.
  */
 function BoardParser (boardString, emptyChar = '0', separator = '') {
