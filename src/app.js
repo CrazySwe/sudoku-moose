@@ -8,3 +8,9 @@
  */
 
 'use strict'
+
+const board = require('./board.js')
+
+const sudokuBoard = board.newBoard()
+
+console.log(sudokuBoard.toString())
