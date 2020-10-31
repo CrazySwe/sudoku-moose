@@ -1,4 +1,3 @@
-
 /**
  * Sudoku Board
  *
@@ -8,7 +7,7 @@
 
 'use strict'
 
-module.exports = function SudokuBoard (board = Array(81).fill(0)) {
+module.exports = function Board (board = Array(81).fill(0)) {
   this.board = board
 
   this.toString = function (separator = '') {
