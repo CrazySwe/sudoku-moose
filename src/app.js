@@ -9,8 +9,10 @@
 
 'use strict'
 
-const board = require('./board.js')
+const SudokuBoard = require('./sudokuboard')
 
-const sudokuBoard = board.newBoard()
+const sudokuBoard = new SudokuBoard()
 
+console.log(sudokuBoard.toString(','))
 console.log(sudokuBoard.toString())
+console.log(sudokuBoard.render())
