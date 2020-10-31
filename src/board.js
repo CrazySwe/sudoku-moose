@@ -7,7 +7,7 @@
 
 'use strict'
 
-module.exports = function Board (board = Array(81).fill(0)) {
+module.exports.Board = function Board (board = Array(81).fill(0)) {
   this.board = board
 
   this.toString = function (separator = '') {
@@ -18,11 +18,7 @@ module.exports = function Board (board = Array(81).fill(0)) {
 
   this.render = function () {
     return this.board.reduce((acc, val, index) => {
-      if ((index + 1) % 9 === 0) {
-        return (acc += `[${val}]\n`)
-      } else {
-        return (acc += `[${val}]`)
-      }
+      return (acc += `[${val}]` + (((index + 1) % 9 === 0) ? '\n' : ''))
     }, '')
   }
 }
