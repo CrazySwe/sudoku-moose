@@ -9,9 +9,9 @@
 
 'use strict'
 
-const SudokuBoard = require('./sudokuboard')
+const Board = require('./board')
 
-const sudokuBoard = new SudokuBoard()
+const sudokuBoard = new Board()
 
 console.log(sudokuBoard.toString(','))
 console.log(sudokuBoard.toString())
