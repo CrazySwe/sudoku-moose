@@ -10,7 +10,7 @@
 'use strict'
 
 const { Board, BoardParser } = require('./board')
-const { BacktrackSolver } = require('./solver')
+const { Solver, SolveAlgorithm } = require('./solver')
 
 // const unsolved = '306508400520000000087000031003010080900863005050090600130000250000000074005206300'
 const multiString = `
@@ -26,7 +26,9 @@ const multiString = `
 
 const testBoard = BoardParser(multiString)
 console.log('Unsolved Board:\n' + testBoard.render())
-const solvingBoard = new BacktrackSolver(testBoard.board)
 
-solvingBoard.solveBoard(0, 0)
-console.log('Solved Board:\n' + new Board(solvingBoard.board).render())
+const result = Solver(testBoard, SolveAlgorithm.SIMPLE)
+console.log(result.render())
+// const solvingBoard = new BacktrackSolver(testBoard)
+// // solvingBoard.solveBoard(0, 0)
+// console.log('Solved Board:\n' + solvingBoard.render())
