@@ -14,7 +14,7 @@ const SolveAlgorithm = Object.freeze({
 })
 module.exports.SolveAlgorithm = SolveAlgorithm
 
-function Solver (board, algorithm) {
+function Solver (board, algorithm = SolveAlgorithm.SIMPLE) {
   switch (algorithm) {
     case SolveAlgorithm.BACKTRACK:
       return new BacktrackSolver(board)
@@ -29,7 +29,7 @@ function Solver (board, algorithm) {
 }
 
 function BacktrackSolver(board) {
-  // Fix backtracksolver
+  //TODO Fix backtracksolver
   return false
 }
 
@@ -50,17 +50,17 @@ function SimpleSolver (board) {
       return true
     }
 
-    // move to next row when reached row end.
+    // Move to next row when reached row end.
     if (col === 9) {
       row++
       col = 0
     }
 
-    // Box needs to be "empty" else move to the next box
+    // Box needs to be "empty" else move to the next square
     if (this.board.board[((row * 9) + col)] > 0) {
       return this.solveBoard(row, col + 1)
     }
-    // Try all digits between 1..9
+    // Try all digits between 1..9.
     for (let digit = 1; digit <= 9; digit++) {
       if (this.isSafe(row, col, digit)) {
         this.board.board[((row * 9) + col)] = digit
@@ -76,18 +76,18 @@ function SimpleSolver (board) {
   }
 
   this.isSafe = function (row, col, digit) {
-    // Check same row
+    // Check same row.
     for (let x = 0; x <= 8; x++) {
       if (this.board.board[((row * 9) + x)] === digit) { return false }
     }
 
-    // Check same column
+    // Check same column.
     for (let y = 0; y <= 8; y++) {
       if (this.board.board[((y * 9) + col)] === digit) { return false }
     }
 
-    // Check same 3x3 square
-    // Get top corner
+    // Check same 3x3 reqion.
+    // Get top corner of region first.
     const topRow = row - (row % 3)
     const topCol = col - (col % 3)
     for (let y = 0; y < 3; y++) {
