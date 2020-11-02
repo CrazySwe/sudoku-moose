@@ -1,7 +1,7 @@
 {
-  "name": "sudoku-solver",
+  "name": "sudoku-moose",
   "version": "1.0.0",
-  "description": "Sudoku solver",
+  "description": "Sudoku Moose",
   "main": "src/app.js",
   "scripts": {
     "start": "node src/app.js",
@@ -10,7 +10,7 @@
   },
   "keywords": [
     "sudoku",
-    "solver"
+    "moose"
   ],
   "author": "Kevin Cederholm",
   "license": "MIT",

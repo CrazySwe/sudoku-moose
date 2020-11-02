@@ -1,7 +1,7 @@
 
 /**
  * Main entry
- * Sudoku Solver
+ * Sudoku Moose
  *
  * @author Kevin Cederholm
  * @version 1.0.0
