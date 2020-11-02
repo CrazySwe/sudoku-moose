@@ -28,12 +28,12 @@ function Solver (board, algorithm = SolveAlgorithm.SIMPLE) {
   }
 }
 
-function BacktrackSolver(board) {
-  //TODO Fix backtracksolver
+function SimpleSolver(board) {
+  //TODO Fix Some-Other-Algorithm-Solver
   return false
 }
 
-function SimpleSolver (board) {
+function BacktrackSolver (board) {
   /**
    * @type {object} - A Board object.
    */
