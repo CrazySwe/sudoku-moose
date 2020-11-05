@@ -7,20 +7,25 @@
 
 'use strict'
 
+const Backtrack = require('./algorithms/backtrack')
+
 const Algorithm = Object.freeze({
   SIMPLE: Symbol('simple'),
   BACKTRACK: Symbol('backtrack')
 })
 
-module.exports.Solver = { Solver, Algorithm }
+module.exports = { Solve, Algorithm }
 
-function Solver (board, algorithm = Algorithm.BACKTRACK) {
+function Solve (board, algorithm = Algorithm.BACKTRACK) {
+  // this.board = board
   switch (algorithm) {
     case Algorithm.BACKTRACK:
-      return new BacktrackSolver(board)
+      return new Backtrack(board)
 
     case Algorithm.SIMPLE:
-      return new SimpleSolver(board)
+      console.error('NOT IMPLEMENTED YET!')
+      // return new SimpleSolver(board)
+      break
 
     default:
       console.log('Solving algorithm not found?')
