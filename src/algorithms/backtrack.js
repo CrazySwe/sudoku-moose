@@ -7,9 +7,7 @@
 
 'use strict'
 
-const { Solver } = require('../solver')
-
-module.exports.Backtrack = Backtrack
+module.exports = Backtrack
 
 /**
  * Backtrack algorithm implementation.
@@ -18,14 +16,13 @@ module.exports.Backtrack = Backtrack
  * @returns
  */
 function Backtrack (board) {
-  Solver.call(this)
   /**
    * @type {object} - A Board object.
    */
   this.board = board
 
   this.solveBoard = function (row = 0, col = 0) {
-    // Check out of bounds after last box.
+    // Check out of bounds after last square.
     if (row >= 8 && col >= 9) {
       return true
     }
