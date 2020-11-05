@@ -12,8 +12,8 @@ module.exports = Backtrack
 /**
  * Backtrack algorithm implementation.
  *
- * @param {*} board
- * @returns
+ * @param {object} board - The board to solve.
+ * @returns {object} - The backtrack solver object.
  */
 function Backtrack (board) {
   /**

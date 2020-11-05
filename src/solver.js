@@ -16,6 +16,13 @@ const Algorithm = Object.freeze({
 
 module.exports = { Solve, Algorithm }
 
+/**
+ * Solve function for sudoku board.
+ *
+ * @param {object} board - The board to solve.
+ * @param {Algorithm} [algorithm=Algorithm.BACKTRACK] - Which algorithm to use.
+ * @returns {object} - The solver object.
+ */
 function Solve (board, algorithm = Algorithm.BACKTRACK) {
   // this.board = board
   switch (algorithm) {
